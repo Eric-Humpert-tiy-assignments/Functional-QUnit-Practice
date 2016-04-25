@@ -24,15 +24,13 @@ if (this.QUnitPractice === undefined) this.QUnitPractice = {};
   }
 
   function authorWithMostPublishedWorks(authors) {
-    var authorName = '';
     var mostWorks = authors[0];
     var result = authors.forEach(function (author, i) {
       if (authors[i].publishedWorks > mostWorks.publishedWorks) {
         mostWorks = authors[i];
-        authorName = authors[i].name;
       }
     })
-    return authorName;
+    return mostWorks.name;
   }
 
   function authorsWhoseNameBeginsWithLetter(authors, letter) {
